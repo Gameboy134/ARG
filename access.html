@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restricted Access</title>
+  <style>
+    body {
+      background: black;
+      color: #00ff88;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .terminal {
+      border: 2px solid #00ff88;
+      padding: 20px;
+      width: 320px;
+    }
+    input {
+      background: black;
+      color: #00ff88;
+      border: 1px solid #00ff88;
+      width: 100%;
+      padding: 6px;
+    }
+    button {
+      margin-top: 10px;
+      width: 100%;
+      background: #003322;
+      color: #00ff88;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="terminal">
+  <p>ENTER PASSWORD:</p>
+  <input type="password" id="pw">
+  <button onclick="check()">ACCESS</button>
+  <p id="msg"></p>
+</div>
+
+<script>
+  function check() {
+    if (document.getElementById("pw").value === "OBSIDIAN") {
+      window.location.href = "secret.html";
+    } else {
+      document.getElementById("msg").textContent = "ACCESS DENIED";
+    }
+  }
+</script>
+
+</body>
+</html>
